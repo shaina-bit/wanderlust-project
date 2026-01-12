@@ -23,10 +23,12 @@
 
   <%- include("../includes/navbar.ejs") %>
 
-  <div class="container">
-    <%- include("../includes/flash.ejs") %>
-    <%- body %>
-  </div>
+  <main class="flex-grow-1">
+    <div class="container">
+      <%- include("../includes/flash.ejs") %>
+      <%- body %>
+    </div>
+  </main>
 
   <%- include("../includes/footer.ejs") %>
 

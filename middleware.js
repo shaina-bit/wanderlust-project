@@ -40,6 +40,9 @@ module.exports.validateListing= (req,res,next) => {
 };
 
 module.exports.validateReview= (req,res,next) => {
+   if (req.method === "DELETE") {
+    return next();
+  }
   let {error}= reviewSchema.validate(req.body);
   if(error){
     let errMsg= error.details.map((el) => el.message).join(",");
